@@ -1,0 +1,84 @@
+.calc-body {
+    background-color: darkgray;
+    padding: 16pt;
+    max-width: 800px;
+    min-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: darkgray 2px 2px 5px;
+}
+
+.calc-button {
+    margin: 0;
+    border: 0 none;
+    border-radius: 8px;
+    opacity: 75%;
+    transition: 250ms linear 100ms
+}
+
+.calc-button:hover {
+    opacity: 1;
+    transform: translate(-2px,-2px);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.33);
+}
+
+.calc-display {
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 2px solid aliceblue;
+    padding: 8pt;
+    margin-bottom: 16pt;
+    min-height: 75px;
+    text-align: end;
+    border-radius: 8px;
+    box-shadow: inset 3px 3px 3px rgba(55, 55, 55, 0.5);
+}
+
+p {
+    font-family: "Droid Sans Mono Dotted", "JetBrains Mono", monospace;
+    font-size: 1.4em;
+}
+
+.calc-buttons-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6pt;
+}
+
+.space6 {
+    width: 6pt;
+}
+
+.calc-buttons-row button {
+    /*width: 100%;*/
+}
+
+.item1 {
+    flex: 25%;
+}
+
+.item2 {
+    flex: 53%;
+}
+
+.item3 {
+    flex: 66%;
+}
+
+.primary {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.secondary {
+    background-color: rgba(100, 100, 100, 0.75);
+}
+
+.accent {
+    background-color: rgba(255, 255, 0, 0.5);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100vw;
+}

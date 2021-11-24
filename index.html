@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Calc</title>
+    <title>Calculadora</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="index.js" defer></script>
+</head>
+<body>
+<div class="container">
+    <div class="calc-body">
+        <div class="calc-display">
+            <p id="display"></p>
+        </div>
+        <div class="calc-buttons">
+            <div class="calc-buttons-row">
+                <button class="calc-button secondary item2" onclick="clearDisplay()"><p>C</p></button>
+                <div class="space6"></div>
+                <button class="calc-button secondary item1" onclick="backspace()"><p><</p></button>
+                <div class="space6"></div>
+                <button class="calc-button secondary item1" onclick="operation('/')"><p>/</p></button>
+            </div>
+            <div class="calc-buttons-row">
+                <button class="calc-button primary item1" onclick="numPressed(7)"><p>7</p></button>
+                <div class="space6"></div>
+                <button class="calc-button primary item1" onclick="numPressed(8)"><p>8</p></button>
+                <div class="space6"></div>
+                <button class="calc-button primary item1" onclick="numPressed(9)"><p>9</p></button>
+                <div class="space6"></div>
+                <button class="calc-button secondary item1" onclick="operation('*')"><p>*</p></button>
+            </div>
+            <div class="calc-buttons-row">
+                <button class="calc-button primary item1" onclick="numPressed(4)"><p>4</p></button>
+                <div class="space6"></div>
+                <button class="calc-button primary item1" onclick="numPressed(5)"><p>5</p></button>
+                <div class="space6"></div>
+                <button class="calc-button primary item1" onclick="numPressed(6)"><p>6</p></button>
+                <div class="space6"></div>
+                <button class="calc-button secondary item1" onclick="operation('-')"><p>-</p></button>
+            </div>
+            <div class="calc-buttons-row">
+                <button class="calc-button primary item1" onclick="numPressed(1)"><p>1</p></button>
+                <div class="space6"></div>
+                <button class="calc-button primary item1" onclick="numPressed(2)"><p>2</p></button>
+                <div class="space6"></div>
+                <button class="calc-button primary item1" onclick="numPressed(3)"><p>3</p></button>
+                <div class="space6"></div>
+                <button class="calc-button secondary item1" onclick="operation('+')"><p>+</p></button>
+            </div>
+            <div class="calc-buttons-row">
+                <button class="calc-button primary item2" onclick="numPressed(0)" data-value=""><p>0</p></button>
+                <div class="space6"></div>
+                <button class="calc-button primary item1" onclick="dot()" data-value=""><p>,</p></button>
+                <div class="space6"></div>
+                <button class="calc-button accent item1" onclick="equal()"><p>=</p></button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
