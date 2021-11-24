@@ -48,11 +48,11 @@ function getIndexesOf(array, values) {
     return indexes.map(n => parseInt(n));
 }
 
-function calcWeek(values) {
+function calcWeak(values) {
     if (values.length === 1) return values;
-    let weekIndexes = getIndexesOf(values, ['+', '-']);
+    let weakIndexes = getIndexesOf(values, ['+', '-']);
     let valuesCopy = Array.from(values);
-    for (const valueIndex of weekIndexes) {
+    for (const valueIndex of weakIndexes) {
         let left = valuesCopy[valueIndex - 1];
         let right = valuesCopy[valueIndex + 1];
         let res;
@@ -60,7 +60,7 @@ function calcWeek(values) {
         else res = left - right;
         valuesCopy[valueIndex + 1] = res;
     }
-    return clearResult(valuesCopy, weekIndexes);
+    return clearResult(valuesCopy, weakIndexes);
 }
 
 function clearResult(result, indexes) {
@@ -97,8 +97,8 @@ function equal() {
         });
     if (values.length <= 2) return;
     let valuesStrongCalculated = calcStrong(values);
-    let valuesWeekCalculated = calcWeek(valuesStrongCalculated);
-    display.innerText = [...values, '=', valuesWeekCalculated[0]].join(' ');
+    let valuesWeakCalculated = calcWeak(valuesStrongCalculated);
+    display.innerText = [...values, '=', valuesWeakCalculated[0]].join(' ');
 }
 
 document.addEventListener('keyup', keyEvent => {
